@@ -31,6 +31,15 @@ function priceToPay (fasi, discount){
 }
 console.log("Total price to pay is : ", priceToPay(200, 50))
 
+// 2. დაწერეთ ფუნცქია რომელიც პარამეტრად მიიღებს პროდუქტის საწყის ფასს და ფასდაკლების პროცენტს რიცხვების სახით (მაგ: (1000, 10)  >> ფასი 1000, ფასდაკლება 10%). და დააბრუნებს ფასდაკლების შემდეგ გადასახდელ თანხას.
+function calculateDiscountedPrice(price, discount) {
+	const percentage = discount / 100; // 30 / 100 = 0.3
+	const discountedPrice = price * percentage; // 997 * 0.3 = 300
+	return Math.round(price - discountedPrice); // 1000 - 300 = 700
+}
+
+
+
 //3 .
 function getCurrencySymbolFromCode (currencyCode){
     switch(currencyCode){
